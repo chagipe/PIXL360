@@ -1,44 +1,59 @@
-# Hiroshi Dron
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/banner.svg">
+  <img src="/banner.svg" alt="PIXL360 Banner" width="100%">
+</picture>
 
-Backend y estructura full stack para una aplicacion web de servicios profesionales de drones.
+<p align="center">
+  <a href="#-stack"><img src="https://img.shields.io/badge/Stack-Next.js%20%7C%20TypeScript%20%7C%20Supabase-3b82f6?style=for-the-badge&labelColor=0f172a" alt="Stack"></a>
+  <a href="#-endpoints"><img src="https://img.shields.io/badge/API-REST-8b5cf6?style=for-the-badge&labelColor=0f172a" alt="API"></a>
+  <a href="#-configuracion-local"><img src="https://img.shields.io/badge/Status-Active-06b6d4?style=for-the-badge&labelColor=0f172a" alt="Status"></a>
+</p>
 
-## Stack elegido
+---
 
-- Next.js App Router como base full stack.
-- API routes para el backend HTTP.
-- Supabase/PostgreSQL como base de datos.
-- Zod para validacion de payloads.
-- TypeScript estricto.
+Backend y estructura full stack para una plataforma de **servicios profesionales con drones**. 🚁
 
-## Estructura
+## ✨ Stack
+
+| Tecnología | Uso |
+|---|---|
+| ⚡ **Next.js** (App Router) | Base full stack |
+| 🌐 **API Routes** | Backend HTTP |
+| 🗄️ **Supabase / PostgreSQL** | Base de datos |
+| ✅ **Zod** | Validación de payloads |
+| 🔒 **TypeScript** | Tipado estricto |
+
+## 📁 Estructura
 
 ```txt
 src/
-  app/
-    api/
-      contact/route.ts
-      quotes/route.ts
-      services/route.ts
-  lib/
-    env.ts
-    http.ts
-    supabase/server.ts
-  server/
-    repositories/
-    schemas/
-    services/
-  types/
+├── app/
+│   └── api/
+│       ├── contact/route.ts   # 📩 Mensajes de contacto
+│       ├── quotes/route.ts    # 💰 Solicitudes de cotización
+│       └── services/route.ts  # 🛠️ Catálogo de servicios
+├── lib/
+│   ├── env.ts                 # 🔐 Variables de entorno
+│   ├── http.ts                # 🌍 Cliente HTTP
+│   └── supabase/server.ts     # 🗄️ Cliente Supabase
+├── server/
+│   ├── repositories/          # 📦 Acceso a datos
+│   ├── schemas/               # 📋 Validación con Zod
+│   └── services/              # ⚙️ Lógica de negocio
+└── types/                     # 🏷️ Tipos compartidos
 supabase/
-  migrations/
+└── migrations/                # 📜 Migraciones SQL
 ```
 
-## Endpoints iniciales
+## 🌍 Endpoints
 
-- `GET /api/services`: lista servicios activos del catalogo.
-- `POST /api/quotes`: crea una solicitud de cotizacion.
-- `POST /api/contact`: guarda un mensaje de contacto.
+| Método | Ruta | Descripción |
+|---|---|---|
+| `GET` | `/api/services` | 📋 Lista servicios activos del catálogo |
+| `POST` | `/api/quotes` | 💰 Crea una solicitud de cotización |
+| `POST` | `/api/contact` | 📩 Guarda un mensaje de contacto |
 
-Ejemplo para `POST /api/quotes`:
+### Ejemplo `POST /api/quotes`
 
 ```json
 {
@@ -51,33 +66,45 @@ Ejemplo para `POST /api/quotes`:
   "location": "Bogota, Colombia",
   "shootDate": "2026-06-15",
   "budgetRange": "2M-4M COP",
-  "message": "Necesitamos video para una propiedad campestre."
+  "message": "Necesitamos video aéreo para una propiedad campestre."
 }
 ```
 
-## Configuracion local
+## 🚀 Configuración local
 
-1. Instala dependencias:
+1. **Instala dependencias**
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-2. Copia `.env.example` a `.env.local` y completa las credenciales de Supabase.
+2. **Configura entorno**
 
-3. Ejecuta la migracion `supabase/migrations/0001_initial_schema.sql` en Supabase.
+   ```bash
+   cp .env.example .env.local
+   ```
+   Completa las credenciales de Supabase.
 
-4. Levanta el servidor:
+3. **Ejecuta migraciones**
 
-```bash
-npm run dev
-```
+   Corre `supabase/migrations/0001_initial_schema.sql` en tu proyecto de Supabase.
 
-## Siguiente crecimiento recomendado
+4. **Inicia el servidor**
 
-- Panel admin protegido para gestionar leads, estados y agenda.
-- Autenticacion con Supabase Auth para operadores internos.
-- Integracion de email o CRM al recibir cotizaciones.
-- Storage de Supabase para subir referencias, brief y entregables.
-- Tablas de proyectos, clientes, paquetes, disponibilidad y facturacion.
+   ```bash
+   npm run dev
+   ```
 
+## 📈 Próximos pasos
+
+- [ ] 🔐 Panel admin protegido (gestionar leads, estados y agenda)
+- [ ] 👤 Autenticación con Supabase Auth para operadores
+- [ ] 📧 Integración de email / CRM al recibir cotizaciones
+- [ ] 🗄️ Supabase Storage para referencias, briefs y entregables
+- [ ] 📊 Tablas de proyectos, clientes, paquetes, disponibilidad y facturación
+
+---
+
+<p align="center">
+  Hecho con ❤️ por <a href="https://github.com/chagipe">@chagipe</a>
+</p>
