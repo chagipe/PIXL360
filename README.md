@@ -1,7 +1,48 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="/banner.svg">
-  <img src="/banner.svg" alt="PIXL360 Banner" width="100%">
-</picture>
+<div align="center">
+
+<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="200" fill="url(#bg)" rx="12"/>
+  <rect width="800" height="4" fill="url(#accent)"/>
+  <rect x="40" y="120" width="720" height="1" fill="url(#glow)"/>
+  <g transform="translate(60, 55)" stroke="#3b82f6" stroke-width="2" fill="none">
+    <line x1="0" y1="40" x2="120" y2="40"/>
+    <line x1="60" y1="10" x2="60" y2="70"/>
+    <circle cx="60" cy="40" r="8" stroke="#8b5cf6" stroke-width="2.5"/>
+    <ellipse cx="30" cy="20" rx="8" ry="4" transform="rotate(-30 30 20)"/>
+    <ellipse cx="90" cy="20" rx="8" ry="4" transform="rotate(30 90 20)"/>
+    <ellipse cx="30" cy="60" rx="8" ry="4" transform="rotate(30 30 60)"/>
+    <ellipse cx="90" cy="60" rx="8" ry="4" transform="rotate(-30 90 60)"/>
+  </g>
+  <text x="200" y="80" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="800" fill="url(#accent)" letter-spacing="4">PIXL360</text>
+  <text x="200" y="115" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#94a3b8" letter-spacing="8" font-weight="300">SERVICIOS PROFESIONALES CON DRONES</text>
+  <g transform="translate(200, 145)">
+    <rect x="0" y="0" width="78" height="24" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="39" y="16" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#3b82f6" text-anchor="middle" font-weight="600">Next.js</text>
+    <rect x="88" y="0" width="92" height="24" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="134" y="16" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#8b5cf6" text-anchor="middle" font-weight="600">TypeScript</text>
+    <rect x="190" y="0" width="96" height="24" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="238" y="16" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#06b6d4" text-anchor="middle" font-weight="600">Supabase</text>
+  </g>
+</svg>
+
+</div>
 
 <p align="center">
   <a href="#-stack"><img src="https://img.shields.io/badge/Stack-Next.js%20%7C%20TypeScript%20%7C%20Supabase-3b82f6?style=for-the-badge&labelColor=0f172a" alt="Stack"></a>
